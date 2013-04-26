@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CookbookManager {
-    private static int nextRecipeId = "1";
+    private static int nextRecipeId = 1;
     private static Map<String,Recipe> RECIPE_MAP = new HashMap<String,Recipe>();
     
             

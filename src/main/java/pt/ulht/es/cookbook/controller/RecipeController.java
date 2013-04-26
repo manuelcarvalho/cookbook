@@ -24,10 +24,14 @@ public class RecipeController {
         
         return "listRecipes";
     }
-    public string showrecipescreationform()
+    /**
+     *
+     * @return
+     */
+    public String showrecipescreationform(){
             
     @RequestMapping("recipes/create")
-    public string showrecipescreationform(){
+    public String showrecipescreationform(){
         return
     }
           
@@ -61,4 +65,5 @@ public class RecipeController {
         
     
     
+}
 }

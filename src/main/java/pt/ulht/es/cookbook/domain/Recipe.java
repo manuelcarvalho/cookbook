@@ -9,7 +9,7 @@ package pt.ulht.es.cookbook.domain;
  * @author Igru
  */
 public class Recipe {
-    private Id;
+    private String id;
     
     private String titulo;
     private String problema;
@@ -19,6 +19,10 @@ public class Recipe {
        this.titulo= titulo;
        this.problema= problema;
        this.solucao= solucao;  
+    }
+
+    void setId(String key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
     
