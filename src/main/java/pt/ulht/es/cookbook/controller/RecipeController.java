@@ -1,5 +1,6 @@
 package pt.ulht.es.cookbook.controller;
 
+import pt.ulht.es.cookbook.domain.CookbookManager;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import pt.ulht.es.cookbook.domain.Recipe;
 
 @Controller
 public class RecipeController {
@@ -22,18 +24,38 @@ public class RecipeController {
         
         return "listRecipes";
     }
+    public string showrecipescreationform()
+            
+    @RequestMapping("recipes/create")
+    public string showrecipescreationform(){
+        return
+    }
+          
+    @RequestMapping(method=RequestMethod.POST, value="/recipes")
+    public String createRecipe(@RequestParam Map<String,String> params){
+        String titulo = params.get("titulo");
+        String problema = params.get("problema");
+        String solucao = params.get("solucao");
+        
+        Recipe recipe = new Recipe(titulo, problema, solucao);
+        
+        CookbookManager.saveRecipe(recipe);
+        
+        return "redirect:/recipes/"+recipe.getId();
+    }
     
     @RequestMapping(method=RequestMethod.GET, value="/recipes/{id}")
     public String showRecipe(Model model, @PathVariable String id) {
 
-        List<String> values = new ArrayList<String>();
-        values.add("Ola"+id);
-        values.add("Mundo"+id);        
-        model.addAttribute("items", values);
-        if(id.equals("42")) {
-        	return "detailedRecipe";
-		} else {
-			return "recipeNotFound";
+        Recipe recipe = CookbookManager.getRecipe(id);
+        
+        if(recipe != null) {
+            model.addAttribute("recipe",recipe);
+            
+            return "detailedRecipe";
+	} else {
+            model.addAttribute("id", id);
+             return "recipeNotFound";
 		}
     }
         

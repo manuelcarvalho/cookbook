@@ -7,11 +7,14 @@
 <title>Recipes</title>
 </head>
 <body>
-<ul>
-<c:forEach var="item" items='${items}'>
-	<li><c:out value="${item}"></c:out></li>
-</c:forEach>
-</ul>
-<img src="/static/cookbook.png" />
+    <h1>${recipe.titulo}</h1>
+    <b>Problema</b>
+    <p>
+        ${recipe.problema}
+    </p>
+    <b>Solução</b>
+    <p>
+        ${recipe.Solução}
+    </p>
 </body>
 </html>

@@ -7,5 +7,6 @@
 </head>
 <body>
 	It works! This page was rendered on ${currentTime}
+        <a href="/recepies"></a>
 </body>
 </html>
