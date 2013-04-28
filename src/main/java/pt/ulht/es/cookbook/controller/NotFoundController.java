@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class NotFoundController {
 
-    @RequestMapping(method=RequestMethod.GET, value="/*")
-    public String handlePageNotFound() {
-        return "pageNotFound";
-    }
-    
+	@RequestMapping(method = RequestMethod.GET, value = "/*")
+	public String handlePageNotFound() {
+		return "pageNotFound";
+	}
+
 }

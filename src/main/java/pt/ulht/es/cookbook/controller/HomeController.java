@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
-  
-	@RequestMapping(method=RequestMethod.GET, value="/")
+
+	@RequestMapping(method = RequestMethod.GET, value = "/")
 	public String showHome(Model model) {
 
-        Date date = new Date(System.currentTimeMillis());
-        DateFormat df = DateFormat.getDateInstance();
-        model.addAttribute("currentTime", df.format(date));
-	    
+		Date date = new Date(System.currentTimeMillis());
+		DateFormat df = DateFormat.getDateInstance();
+		model.addAttribute("currentTime", df.format(date));
+		//model.addAttribute("nomes", "Manuel Carvalho");
+
 		return "home";
 	}
 

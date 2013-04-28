@@ -4,17 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recipes</title>
+<title>Recipes $ {recipe.id}</title>
 </head>
 <body>
-    <h1>${recipe.titulo}</h1>
-    <b>Problema</b>
-    <p>
-        ${recipe.problema}
-    </p>
-    <b>Solução</b>
-    <p>
-        ${recipe.Solução}
-    </p>
+ <h1>${recipe.titulo}</h1>
+<b>Problema</b>
+<p>${recipe.problema}</p>
+<b>Solucao:</b>
+<p>${recipe.solucao}</p>
+
 </body>
 </html>
