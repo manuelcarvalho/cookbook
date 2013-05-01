@@ -6,9 +6,14 @@
 <title>Homepage</title>
 </head>
 <body>
+<<<<<<< HEAD
 
 <a href="/recipes">Listar Receitas</a><br/>
 <a href="/recipes/create">Criar Nova Receita</a><br/>
 	
+=======
+    <a href="/recepies"> Listar receitas </a><br/>
+    <a href="/create"> Criar Receitas </a><br/>
+>>>>>>> e47d730ed2c0dc104d5a7dad83a8b80a96e892c9
 </body>
 </html>
