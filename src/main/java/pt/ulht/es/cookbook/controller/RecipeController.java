@@ -17,87 +17,59 @@ import pt.ulht.es.cookbook.domain.Recipe;
 
 @Controller
 public class RecipeController {
-
-<<<<<<< HEAD
-	@RequestMapping(method=RequestMethod.GET, value="/recipes")
+	@RequestMapping(method = RequestMethod.GET, value = "/recipes")
 	public String listRecipes(Model model) {
 		Collection<Recipe> recipes = CookbookManager.getRecipes();
-		model.addAttribute("recipes",recipes);
+		model.addAttribute("recipes", recipes);
 		return "listRecipes";
 
+	}
+
+	@RequestMapping(method = RequestMethod.GET, value = "/recipes/create")
+	public String showRecipeCreationForm() {
+		return "createRecipe";
 
 	}
 
-	@RequestMapping(method=RequestMethod.GET, value="/recipes/create")
-	public String showRecipeCreationForm(){
-		return"createRecipe";
-
+	@RequestMapping("recipes/create")
+	public String showrecipescreationform() {
+		return "createrecipe";
 	}
-	@RequestMapping(method=RequestMethod.POST, value="/recipes")
-	public String createRecipe(@RequestParam Map<String,String> params){
+
+	@RequestMapping(method = RequestMethod.POST, value = "/recipes")
+	public String createRecipe(@RequestParam Map<String, String> params) {
 		String titulo = params.get("titulo");
 		String problema = params.get("problema");
 		String solucao = params.get("solucao");
-=======
-        List<String> values = new ArrayList<String>();
-        values.add("Ola");
-        values.add("Mundo");        
-        model.addAttribute("items", values);
-        
-        return "listRecipes";
-    }
-    /**
-     *
-     * @return
-     */
-    public String showrecipescreationform(){
-            
-    @RequestMapping("recipes/create")
-    public String showrecipescreationform(){
-        return
-    }
-          
-    @RequestMapping(method=RequestMethod.POST, value="/recipes")
-    public String createRecipe(@RequestParam Map<String,String> params){
-        String titulo = params.get("titulo");
-        String problema = params.get("problema");
-        String solucao = params.get("solucao");
-        
-        Recipe recipe = new Recipe(titulo, problema, solucao);
-        
-        CookbookManager.saveRecipe(recipe);
-        
-        return "redirect:/recipes/"+recipe.getId();
-    }
-    
-    @RequestMapping(method=RequestMethod.GET, value="/recipes/{id}")
-    public String showRecipe(Model model, @PathVariable String id) {
->>>>>>> e47d730ed2c0dc104d5a7dad83a8b80a96e892c9
 
 		Recipe recipe = new Recipe(titulo, problema, solucao);
 
 		CookbookManager.saveRecipe(recipe);
 
-		return "redirect:/recipes/"+recipe.getId();	}
-
-	@RequestMapping(method=RequestMethod.GET, value="/recipes/{id}")
-	public String showRecipe(Model model, @PathVariable String id) {
-		Recipe recipe = CookbookManager.getRecipe(id);
-		if(recipe != null) {
-			model.addAttribute("recipe",recipe);
-			return "detailedRecipe";
-		} else {
-			//model.addAttribute("id", id);
-			return "recipeNotFound";
-		}
-<<<<<<< HEAD
+		return "redirect:/recipes/" + recipe.getId();
 	}
 
-=======
-    }
-        
-    
-    
-}
->>>>>>> e47d730ed2c0dc104d5a7dad83a8b80a96e892c9
+	/*
+	 * @RequestMapping(method=RequestMethod.GET, value="/recipes/{id}") public
+	 * String showRecipe(Model model, @PathVariable String id) {
+	 * 
+	 * Recipe recipe = new Recipe(titulo, problema, solucao);
+	 * 
+	 * CookbookManager.saveRecipe(recipe);
+	 * 
+	 * return "redirect:/recipes/"+recipe.getId(); }
+	 */
+
+	@RequestMapping(method = RequestMethod.GET, value = "/recipes/{id}")
+	public String showRecipe(Model model, @PathVariable String id) {
+		Recipe recipe = CookbookManager.getRecipe(id);
+		if (recipe != null) {
+			model.addAttribute("recipe", recipe);
+			return "detailedRecipe";
+		} else {
+			// model.addAttribute("id", id);
+			return "recipeNotFound";
+		}
+
+	}
 }
