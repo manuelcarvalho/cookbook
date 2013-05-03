@@ -1,23 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package pt.ulht.es.cookbook.domain;
 
-/**
- *
- * @author Manuel Carvalho
- */
 public class Recipe {
 	private String id;
 	private String titulo;
 	private String problema;
 	private String solucao;
+	private String autor;
 
-	public Recipe(String titulo, String problema, String solucao){
+	public Recipe(String titulo, String problema, String solucao, String autor){
 		this.titulo= titulo;
 		this.problema= problema;
 		this.solucao= solucao;  
+		this.autor=autor;
 	}
 
 	public String getTitulo(){
@@ -35,13 +29,13 @@ public class Recipe {
 		return id;
 
 	}
-	//public void setProblema(String problema){
-
-	//this.problema= problema;
-	// }
 	public void setId(String id){
 
 		this.id= id;
+	}
+	public String getAutor() {
+		return autor;
+	
 	}
     
     

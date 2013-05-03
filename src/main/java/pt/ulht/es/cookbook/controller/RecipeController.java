@@ -25,7 +25,7 @@ public class RecipeController {
 
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = "/recipes/create")
+	@RequestMapping(method = RequestMethod.GET, value = "/recipes/create") //mostrar o formulario
 	public String showRecipeCreationForm() {
 		return "createRecipe";
 
@@ -41,24 +41,16 @@ public class RecipeController {
 		String titulo = params.get("titulo");
 		String problema = params.get("problema");
 		String solucao = params.get("solucao");
+		String autor = params.get("autor");
 
-		Recipe recipe = new Recipe(titulo, problema, solucao);
+		Recipe recipe = new Recipe(titulo, problema, solucao, autor);
 
 		CookbookManager.saveRecipe(recipe);
 
-		return "redirect:/recipes/" + recipe.getId();
+		return "redirect:/recipes/" + recipe.getId();// reencaminha o browser para uma página que ira mostrar em
+		//detalhe a "recipe" acabada de criar e vai buscar pelo sei id. (aponta para o metodo seguinte).vai mostar sempre 
+		//o ultimo id a ser criado.
 	}
-
-	/*
-	 * @RequestMapping(method=RequestMethod.GET, value="/recipes/{id}") public
-	 * String showRecipe(Model model, @PathVariable String id) {
-	 * 
-	 * Recipe recipe = new Recipe(titulo, problema, solucao);
-	 * 
-	 * CookbookManager.saveRecipe(recipe);
-	 * 
-	 * return "redirect:/recipes/"+recipe.getId(); }
-	 */
 
 	@RequestMapping(method = RequestMethod.GET, value = "/recipes/{id}")
 	public String showRecipe(Model model, @PathVariable String id) {
@@ -67,8 +59,7 @@ public class RecipeController {
 			model.addAttribute("recipe", recipe);
 			return "detailedRecipe";
 		} else {
-			// model.addAttribute("id", id);
-			return "recipeNotFound";
+			return "recipeNotFound";// mostra o jsp "recipeNotfound" 
 		}
 
 	}

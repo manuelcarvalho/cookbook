@@ -1,13 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package pt.ulht.es.cookbook.domain;
-
-/**
- *
- * @author Manuel Carvalho
- */
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,11 +25,6 @@ public class CookbookManager {
 		return RECIPE_MAP.values();
 
 	}
-
-/*
-    public static Recipe getRecipe(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
     
 }
 

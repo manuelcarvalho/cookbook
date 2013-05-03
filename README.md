@@ -1,8 +1,8 @@
 # Grupo
-- 123456 David Martinho
-- 123456 David Martinho
-- 123456 David Martinho
-- 123456 David Martinho
+- 20096631 Manuel Carvalho
+- 2500437 Igor Gomes
+- 21103472 José Lee Hun Kine
+- 21103756 Cláudio Vaz
 
 ## Changelog
 #### Versão 1.0:
