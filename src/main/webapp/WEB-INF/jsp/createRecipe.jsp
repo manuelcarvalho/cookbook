@@ -1,12 +1,8 @@
-<%-- 
-    Document   : createRecipe
-    Created on : 28/Abr/2013, 19:14:00
-    Author     : Manuel
---%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <form method="POST"action="/recipes">
-Título: <input type="text" name="titulo"/><br>
+TÃ­tulo: <input type="text" name="titulo"/><br>
 Problema: <input type="text" name="problema"/><br>
-Solução: <input type="text" name="solucao"/><br>
+SoluÃ§Ã£o: <input type="text" name="solucao"/><br>
 Autor: <input type="text" name="autor"/><br>
 <input type="submit" value="Criar Nova Receita" />
 

@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<títle>Recipe ${recipe.id}</title>
+<title>Recipe ${recipe.id}</title>
+
 </head>
 <body>
+<b>Título:</b>
  <h1>${recipe.titulo}</h1>
 <b>Problema:</b>
 <p>${recipe.problema}</p>
