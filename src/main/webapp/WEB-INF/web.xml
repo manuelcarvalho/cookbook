@@ -18,6 +18,16 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
  
+ <filter>
+		<filter-name>transaction-filter</filter-name>
+		<filter-class>pt.ulht.es.cookbook.filter.TransactionFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>transaction-filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
     <servlet-mapping>
         <servlet-name>cookbook</servlet-name>
         <url-pattern>/</url-pattern>
