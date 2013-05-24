@@ -15,5 +15,11 @@ public class Recipe extends Recipe_Base {
         setCookbookManager(CookbookManager.getInstance());
         
     }
+
+	public void delete() {
+		// TODO Auto-generated method stub
+		setCookbookManager(null);
+		super.deleteDomainObject();
+	}
     
 }
