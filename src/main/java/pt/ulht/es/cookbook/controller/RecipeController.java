@@ -23,12 +23,6 @@ public class RecipeController {
 		return "listRecipes";
 
 	}
-	@RequestMapping(method=RequestMethod.GET, value="/recipes/{id}/delete")
-	public String deleteRecipe(@PathVariable("id") String id){
-	Recipe recipe = AbstractDomainObject.fromExternalId(id);
-	recipe.delete();
-	return "redirect:/";
-	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/recipes/create") //mostrar o formulario
 	public String showRecipeCreationForm() { 
