@@ -41,8 +41,9 @@ public class RecipeController {
 		String problema = params.get("problema");
 		String solucao = params.get("solucao");
 		String autor = params.get("autor");
+		String tag = params.get("tag");
 
-		Recipe recipe = new Recipe(titulo, problema, solucao, autor);
+		Recipe recipe = new Recipe(titulo, problema, solucao, autor, tag);
 
 
 		return "redirect:/recipes/" + recipe.getExternalId();// reencaminha o browser para uma página que ira mostrar em

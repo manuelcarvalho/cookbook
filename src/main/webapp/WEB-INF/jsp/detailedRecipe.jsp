@@ -15,5 +15,7 @@
 <p>${recipe.solution}</p>
 <b>Autor:</b>
 <p>${recipe.author}</p>
+<b>Tag:</b>
+<p>${recipe.tag}</p>
 </body>
 </html>

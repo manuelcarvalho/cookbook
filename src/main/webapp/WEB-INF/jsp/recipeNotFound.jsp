@@ -5,6 +5,6 @@
 <title>Recipe Not Found</title>
 </head>
 <body>
- Lamentamos mas a receita com o ID ${Id} nao foi encontrada...
+ Lamentamos mas a receita com o ID ${externalId} nao foi encontrada...
 </body>
 </html>
