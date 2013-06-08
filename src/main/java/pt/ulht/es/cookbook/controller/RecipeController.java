@@ -46,6 +46,7 @@ public class RecipeController {
 	public String showrecipescreationform() {
 		return "createrecipe";
 	}
+	
 
 	@RequestMapping(method = RequestMethod.POST, value = "/recipes")
 	public String createRecipe(@RequestParam Map<String, String> params) {
@@ -72,6 +73,7 @@ public class RecipeController {
 		} else {
 			return "recipeNotFound";// mostra o jsp "recipeNotfound" 
 		}
+		
 
 	}
 }

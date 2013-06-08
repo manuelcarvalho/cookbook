@@ -17,6 +17,7 @@ public class Recipe extends Recipe_Base {
         setCookbookManager(CookbookManager.getInstance());
         
     }
+<<<<<<< HEAD
     public static class Titlecomp implements Comparator<Recipe> {
     	
     
@@ -25,6 +26,9 @@ public class Recipe extends Recipe_Base {
     }
 }
 // 06-06-2013
+=======
+        					
+>>>>>>> -
 	public void delete() {
 		// TODO Auto-generated method stub
 		setCookbookManager(null);
@@ -32,3 +36,4 @@ public class Recipe extends Recipe_Base {
 	}
     
 }
+
