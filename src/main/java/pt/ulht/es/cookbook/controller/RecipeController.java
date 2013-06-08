@@ -2,6 +2,10 @@ package pt.ulht.es.cookbook.controller;
 
 import pt.ist.fenixframework.pstm.AbstractDomainObject;
 import pt.ulht.es.cookbook.domain.CookbookManager;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.Map;
 
@@ -18,8 +22,10 @@ import pt.ulht.es.cookbook.domain.Recipe;
 public class RecipeController {
 	@RequestMapping(method = RequestMethod.GET, value = "/recipes")
 	public String listRecipes(Model model) {
-		Set<Recipe> recipes = CookbookManager.getInstance().getRecipeSet();
+		List<Recipe> recipes = new ArrayList<Recipe>(CookbookManager.getInstance().getRecipeSet());
+		Collections.sort(recipes, new Recipe.Titlecomp());
 		model.addAttribute("recipes", recipes);
+		//model.addAttribute("RecipeSortedList",RecipeList)
 		return "listRecipes";
 
 	}

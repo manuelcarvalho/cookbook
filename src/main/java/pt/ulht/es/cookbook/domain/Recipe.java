@@ -1,5 +1,7 @@
 package pt.ulht.es.cookbook.domain;
 
+import java.util.Comparator;
+
 import org.apache.taglibs.standard.tag.common.xml.SetTag;
 import org.joda.time.DateTime;
 
@@ -15,6 +17,13 @@ public class Recipe extends Recipe_Base {
         setCookbookManager(CookbookManager.getInstance());
         
     }
+    public static class Titlecomp implements Comparator<Recipe> {
+    	
+    
+    public int compare(Recipe o1, Recipe o2){
+    	return o1.getTitle().compareTo(o2.getTitle());
+    }
+}
 // 06-06-2013
 	public void delete() {
 		// TODO Auto-generated method stub

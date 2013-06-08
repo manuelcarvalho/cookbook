@@ -17,6 +17,8 @@
 <p>${recipe.author}</p>
 <b>Tag:</b>
 <p>${recipe.tag}</p>
+<b>Timestamp:</b>
+<p>${recipe.creationTimestamp}</p>
 <a href="/recipes/${recipe.externalId}/delete"><input type="submit" value="Apagar"></a>
 </body>
 </html>
