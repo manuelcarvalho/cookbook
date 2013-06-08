@@ -8,7 +8,7 @@
 <body>
 
 
-<a href="/recipes">Listar Receitas</a><br/>
+<a href="/recipes">Listar Receitas</a><br/br/>
 <a href="/recipes/create">Criar Nova Receita</a><br/>
 	
   
