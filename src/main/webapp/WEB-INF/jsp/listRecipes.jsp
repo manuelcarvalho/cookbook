@@ -7,8 +7,33 @@
 <title>Recipes List</title>
 </head>
 <body>
+
+
+<body style="background-color:rgb(195,195,195);">
+</head>
+<body>
+<h1>Lista de Receitas</h1>
+
+<br>
+<input type="button" value="Voltar" onclick="javascript:location.href='/'")>
+
+<table align="center" border="0" bordercolor="#FFCC00"  width="50%" cellpadding="0" cellspacing="10">
+
+
 <c:forEach var="recipe" items='${recipes}'>
-<a href="/recipes/${recipe.externalId} "> ${recipe.title}</a><br/>
+	<tr>
+		<td>
+			<h4>${recipe.title}:</h4>
+		</td>
+		<td>
+			<input type="button" value="Detalhes" onclick="location.href='/recipes/${recipe.externalId}'">
+			<a href="/recipes/${recipe.externalId}/delete"><input type="button" value="Remover"></a>
+			</td>
+	</tr>
+			
 </c:forEach>
+</table>
+
+
 </body>
 </html>

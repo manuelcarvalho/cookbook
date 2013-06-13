@@ -1,14 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<form method="POST"action="/recipes">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
 
-Título: <input type="text" name="titulo"/><br>
-Problema: <input type="text" name="problema"/><br>
-Solução: <input type="text" name="solucao"/><br>
-Autor: <input type="text" name="autor"/><br>
-Tag: <input type="text" name="tag"/><br>
-<input type="submit" value="Criar Nova Receita" />
+<body style="background-color:rgb(195,195,195);">
+
+<style type="text/css">
+h2
+{
+position:absolute;
+left:575px;
+top:200px;
+}
+</style>
+
+<body>
+<h2>
+<table border = "1" align = "center">
+<tr>
+<th><p style="font-family:arial;color:white;font-size:15px;">Criar Receita</p></th>
+</tr>
+<tr>
+
+<td><form method="POST"action="/recipes" align="center">
+
+Titulo: <input type="text" name="titulo"/><br>
+Problema:<input type="text" name="problema"/><br>
+Solucao:<input type="text" name="solucao"/><br>
+Autor<input type="text" name="autor"/><br>
+Tag:<input type="text" name="tag"/><br>
+<input type="submit" value="Criar"/>
+<input type="button" value="Voltar" onclick="javascript:location.href='/'")>
+</h2>
+<body>
 
 </form>
+</tr>
+
+
+
     
 
 

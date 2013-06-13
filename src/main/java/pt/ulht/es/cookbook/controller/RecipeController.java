@@ -33,7 +33,7 @@ public class RecipeController {
 	public String deleteRecipe(@PathVariable("id") String id){
 	Recipe recipe = AbstractDomainObject.fromExternalId(id);
 	recipe.delete();
-	return "redirect:/";
+	return "redirect:/recipes/";
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/recipes/create") //mostrar o formulario
@@ -55,9 +55,7 @@ public class RecipeController {
 		String solucao = params.get("solucao");
 		String autor = params.get("autor");
 		String tag = params.get("tag");
-
 		Recipe recipe = new Recipe(titulo, problema, solucao, autor, tag);
-
 
 		return "redirect:/recipes/" + recipe.getExternalId();// reencaminha o browser para uma página que ira mostrar em
 		//detalhe a "recipe" acabada de criar e vai buscar pelo sei id. (aponta para o metodo seguinte).vai mostar sempre 
