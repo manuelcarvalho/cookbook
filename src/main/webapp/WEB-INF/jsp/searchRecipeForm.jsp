@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<form method = "POST" action = "/recipes/search">
+	
+<form>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search Recipe</title>
 </head>
@@ -22,9 +23,10 @@ top:200px;
 <th width="500"><p style="font-family:arial;color:black;font-size:15px;">Pesquisar Receitas</p></th>
 <tr>
 <td>
-<center><b>Tag: <input type="text" name="search"></b><br>
-<input type="button" name="search" value="Pesquisar"></center>
+<center><b>Tag: <input type="text" name="searchparams"></b><br>
+<a href="/recipes/search"><input type="submit" name="search" value="Pesquisar"></center>
 </td>
 </tr>
 </h2>
 </table>
+<center><input type="button" value="Cancelar" onclick="javascript:location.href='/'")></center>

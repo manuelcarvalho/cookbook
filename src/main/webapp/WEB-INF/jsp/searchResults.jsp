@@ -4,11 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recipes List</title>
+<title>Search Results</title>
 </head>
-<body>
-
-<body>
 
 <body style="background-color:rgb(195,195,195);">
 
@@ -19,27 +16,21 @@ h1{text-align:center;font-family:Arial;color:#000000;}
 h2
 {
 position:absolute;
-left:515px;
+left:650px;
 top:200px;
 }
 </style>
 
-<h1>Lista de Receitas</h1>
+</center><h1>Resultados da Pesquisa<h1></h1></center>
 
 <h2>
-<form>
-
 <c:forEach var="recipe" items='${recipes}'>
 
-Titulo:${recipe.title}
-Autor:${recipe.author}
-Tag:${recipe.tag}
-
-<input type="button" value="Detalhes" onclick="location.href='/recipes/${recipe.externalId}'">
-<a href ="/recipes/${recipe.externalId}/edit"><input type="button" value="Editar"></a>
-<a href= "/recipes/${recipe.externalId}/delete" ><input type="button" value="Remover"></a><br>
-
+<a href="/recipes/${recipe.externalId} "> ${recipe.title}</a><br/>
 </c:forEach>
-<input type="button" value="Voltar" onclick="javascript:location.href='/'")>
+<center><input type="button" value="Nova Pesquisa" onclick="javascript:location.href='/recipes/search'")>
+<input type="button" value="Cancelar" onclick="javascript:location.href='/'")></center>
+</h2>
+
 </body>
 </html>

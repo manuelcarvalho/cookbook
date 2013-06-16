@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<form method="POST"action="/recipes">
+
 
 <body style="background-color:rgb(195,195,195);">
 
@@ -28,16 +28,15 @@ Problema:<input type="text" name="problema"/><br>
 Solucao:<input type="text" name="solucao"/><br>
 Autor<input type="text" name="autor"/><br>
 Tag:<input type="text" name="tag"/><br>
-<input type="submit" value="Criar"/>
-<input type="button" value="Voltar" onclick="javascript:location.href='/'")>
+<center><input type="submit" value="Criar"/>
+<input type="button" value="Cancelar" onclick="javascript:location.href='/'")>
+</center>
+</td>
+</tr>
+</table>
 </h2>
 <body>
-
 </form>
-</tr>
-
-
-
     
 
 
